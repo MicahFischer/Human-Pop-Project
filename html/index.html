@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Human Population</title>
+	<link rel="stylesheet" type="text/css" href="../jquery.multiscroll.css" />
+
+	<script src="main.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="../vendors/jquery.easings.min.js"></script>
+	<script type="text/javascript" src="../jquery.multiscroll.js"></script>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+	 crossorigin="anonymous">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#container').multiscroll({
+				sectionsColor: ['white', 'black', 'white', 'black', 'white', 'black', 'white', 'black', 'white', 'black',
+					'white', 'black', 'white', 'black', 'white', 'black', 'white', 'black', 'white', 'black', 'white', 'black',
+					'white', 'black', 'white', 'black', 'white', 'black', 'white', 'black', 'white', 'black', 'white', 'black',
+					'white', 'black', 'white', 'black', 'white', 'black', 'white', 'black', 'white', 'black', 'white', 'black',
+					'white', 'black', 'white', 'black'
+				],
+				anchors: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve',
+					'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty', 'twentyone',
+					'twentytwo', 'twentythree', 'twentyfour', 'twentyfive', 'twentysix', 'twentyseven', 'twentyeight',
+					'twentynine', 'thirty', 'thirtyone', 'thirtytwo', 'thirtythree', 'thirtyfour', 'thirtyfive', 'thirtysix',
+					'thirtyseven', 'thirtyeight', 'thirtynine', 'forty', 'fortyone', 'fortytwo', 'fortythree', 'fortyfour',
+					'fortyfive', 'fortysix', 'fortyseven', 'fortyeight', 'fortynine', 'fifty', 'fiftyone'
+				],
+				menu: '#menu',
+				easing: 'easeOutBack'
+			});
+		});
+	</script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
+	<link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css">
+	<script src="bower_components/chartist/dist/chartist.min.js"></script>
+	<script src="graph.js"></script>
+</head>
+	<body>
+		<script>
+			AOS.init();
+		</script>
+		<nav><span onclick="openNav()"><i class="fas fa-bars"></i></span></nav>
+		<section id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a data-menuanchor="one" href="#one" onclick="closeNav()"><i class="fas fa-home"></i></a>
+			<a data-menuanchor="two" href="#two" onclick="closeNav()">1789</a>
+			<a data-menuanchor="three" href="#three" onclick="closeNav()">1810</a>
+			<a data-menuanchor="four" href="#four" onclick="closeNav()">1820s</a>
+			<a data-menuanchor="five" href="#five" onclick="closeNav()">1825</a>
+			<a data-menuanchor="six" href="#six" onclick="closeNav()">1834</a>
+			<a data-menuanchor="seven" href="#seven" onclick="closeNav()">1843</a>
+			<a data-menuanchor="eight" href="#eight" onclick="closeNav()">1845</a>
+			<a data-menuanchor="nine" href="#nine" onclick="closeNav()">1848</a>
+			<a data-menuanchor="ten" href="#ten" onclick="closeNav()">1855</a>
+			<a data-menuanchor="eleven" href="#eleven" onclick="closeNav()">1858</a>
+			<a data-menuanchor="twelve" href="#twelve" onclick="closeNav()">1865</a>
+			<a data-menuanchor="thirteen" href="#thirteen" onclick="closeNav()">1869</a>
+			<a data-menuanchor="fourteen" href="#fourteen" onclick="closeNav()">1873</a>
+			<a data-menuanchor="fifteen" href="#fifteen" onclick="closeNav()">1879</a>
+			<a data-menuanchor="sixteen" href="#sixteen" onclick="closeNav()">1885</a>
+			<a data-menuanchor="seventeen" href="#seventeen" onclick="closeNav()">1893</a>
+			<a data-menuanchor="eighteen" href="#eighteen" onclick="closeNav()">1902</a>
+			<a data-menuanchor="nineteen" href="#nineteen" onclick="closeNav()">1903</a>
+			<a data-menuanchor="twenty" href="#twenty" onclick="closeNav()">1908</a>
+			<a data-menuanchor="twentyone" href="#twentyone" onclick="closeNav()">1908</a>
+			<a data-menuanchor="twentytwo" href="#twentytwo" onclick="closeNav()" href="#">1917</a>
+			<a data-menuanchor="twentythree" href="#twentythree" onclick="closeNav()" href="#">1923</a>
+			<a data-menuanchor="twentyfour" href="#twentyfour" onclick="closeNav()" href="#">1928</a>
+			<a data-menuanchor="twentyfive" href="#twentyfive" onclick="closeNav()" href="#">1929</a>
+			<a data-menuanchor="twentysix" href="#twentysix" onclick="closeNav()" href="#">1937</a>
+			<a data-menuanchor="twentyseven" href="#twentyseven" onclick="closeNav()" href="#">1939</a>
+			<a data-menuanchor="twentyeight" href="#twentyeight" onclick="closeNav()" href="#">WWII</a>
+			<a data-menuanchor="twentynine" href="#twentynine" onclick="closeNav()" href="#">1940s</a>
+			<a data-menuanchor="thirty" href="#thirty" onclick="closeNav()" href="#">1945</a>
+			<a data-menuanchor="thirtyone" href="#thirtyone" onclick="closeNav()" href="#">1946</a>
+			<a data-menuanchor="thirtytwo" href="#thirtytwo" onclick="closeNav()" href="#">1955</a>
+			<a data-menuanchor="thirtythree" href="#thirtythree" onclick="closeNav()" href="#">1960</a>
+			<a data-menuanchor="thirtyfour" href="#thirtyfour" onclick="closeNav()" href="#">1962</a>
+			<a data-menuanchor="thirtyfive" href="#thirtyfive" onclick="closeNav()" href="#">1964</a>
+			<a data-menuanchor="thirtysix" href="#thirtysix" onclick="closeNav()" href="#">1968</a>
+			<a data-menuanchor="thirtyseven" href="#thirtyseven" onclick="closeNav()" href="#">1970</a>
+			<a data-menuanchor="thirtyeight" href="#thirtyeight" onclick="closeNav()" href="#">1978</a>
+			<a data-menuanchor="thirtynine" href="#thirtynine" onclick="closeNav()" href="#">1980</a>
+			<a data-menuanchor="forty" href="#forty" onclick="closeNav()" href="#">1980</a>
+			<a data-menuanchor="fortyone" href="#fortyone" onclick="closeNav()" href="#">1985</a>
+			<a data-menuanchor="fortytwo" href="#fortytwo" onclick="closeNav()" href="#">1989</a>
+			<a data-menuanchor="fortythree" href="#fortythree" onclick="closeNav()" href="#">1992</a>
+			<a data-menuanchor="fortyfour" href="#fortyfour" onclick="closeNav()" href="#">1994</a>
+			<a data-menuanchor="fortyfive" href="#fortyfive" onclick="closeNav()" href="#">1995</a>
+			<a data-menuanchor="fortysix" href="#fortysix" onclick="closeNav()" href="#">1997</a>
+			<a data-menuanchor="fortyseven" href="#fortyseven" onclick="closeNav()" href="#">1997</a>
+			<a data-menuanchor="fortyeight" href="#fortyeight" onclick="closeNav()" href="#">1998</a>
+			<a data-menuanchor="fortynine" href="#fortynine" onclick="closeNav()" href="#">2000</a>
+			<a data-menuanchor="fifty" href="#fifty" onclick="closeNav()" href="#">2008</a>
+			<a data-menuanchor="fiftyone" href="#fiftyone" onclick="closeNav()" href="#">2009</a>
+		</section>
+
+
+
+
+		<div id="container">
+			<div class="ms-left">
+				<div class="ms-section" id="left1">
+					<h1 data-aos="fade-up" data-aos-delay="300">Human Population Timeline</h1>
+					<h2 data-aos="fade-up" data-aos-delay="600">1793-2009</h2>
+				</div>
+				<div class="ms-section" id="left2">
+				</div>
+				<div class="ms-section" id="left3">
+					<h3>1810</h3>
+					<p>French Chef Nicolas Appert invents airtight food preservation (canning) allowing people to eat fruits and
+						vegetables year round.</p>
+				</div>
+				<div class="ms-section" id="left4">
+				</div>
+				<div class="ms-section" id="left5">
+					<h3>1825</h3>
+					<p>The first steam-powered railway travels across Great Britain revolutionizing transportation.</p>
+				</div>
+				<div class="ms-section" id="left6">
+				</div>
+				<div class="ms-section" id="left7">
+					<h3>1843</h3>
+					<p>Edwin Chadwick starts the Public Health Movement in Britain to improve the sanitation and combat deadly water
+						borne diseases like Cholera, Typhoid, and Typhus.</p>
+				</div>
+				<div class="ms-section" id="left8">
+				</div>
+				<div class="ms-section" id="left9">
+					<h3>1848</h3>
+					<p>World’s first Women’s rights convention held in Seneca Falls, NY.</p>
+				</div>
+				<div class="ms-section" id="left10">
+				</div>
+				<div class="ms-section" id="left11">
+					<h3>1858</h3>
+					<p>Louis Pasteur links germs to fermentation and disease leading to the pasteurization of food and the use of
+						sterilization and antiseptics and a new understanding of microbiology.</p>
+				</div>
+				<div class="ms-section" id="left12">
+				</div>
+				<div class="ms-section" id="left13">
+					<h3>1869</h3>
+					<p>The first Transcontinental Railroad is completed allowing the quick transport of food and other goods across
+						the U.S.</p>
+				</div>
+				<div class="ms-section" id="left14">
+				</div>
+				<div class="ms-section" id="left15">
+					<h3>1879</h3>
+					<p>Thomas Edison demonstrates his first incandescent light bulb, leading to the opening of the first utility plant
+						a few years later.</p>
+				</div>
+				<div class="ms-section" id="left16">
+				</div>
+				<div class="ms-section" id="left17">
+					<h3>1893</h3>
+					<p>New Zealand is the first country to grant women equal voting rights- 27 years before the U.S.</p>
+				</div>
+				<div class="ms-section" id="left18">
+				</div>
+				<div class="ms-section" id="left19">
+					<h3>1903</h3>
+					<p>The Wright brothers first flight. </p>
+				</div>
+				<div class="ms-section" id="left20">
+				</div>
+				<div class="ms-section" id="left21">
+					<h3>1908</h3>
+					<p>German Chemist, Fritz Haber, discovers how to use nitrogen as fertilizer enabling a revolution in agriculture
+						that begins to feed millions more.</p>
+				</div>
+				<div class="ms-section" id="left22">
+				</div>
+				<div class="ms-section" id="left23">
+					<h3>1923</h3>
+					<p>American Clarence Birdseye invented flash freezing technique to preserve food.</p>
+				</div>
+				<div class="ms-section" id="left24">
+				</div>
+				<div class="ms-section" id="left25">
+					<h3>1929</h3>
+					<p>The Great Depression results in a “baby bust” birth rates begin to decline.</p>
+				</div>
+				<div class="ms-section" id="left26">
+				</div>
+				<div class="ms-section" id="left27">
+					<h3>1939</h3>
+					<p>DDT is introduced marking the start of heavy pesticide use on crops in the U.S. It was later banned in
+						1972.</p>
+				</div>
+				<div class="ms-section" id="left28">
+				</div>
+				<div class="ms-section" id="left29">
+					<h3>1940’s</h3>
+					<p>Antibiotics are developed transforming medicine worldwide and increasing life expectancy.</p>
+				</div>
+				<div class="ms-section" id="left30">
+				</div>
+				<div class="ms-section" id="left31">
+					<h3>1946</h3>
+					<p>Start of the post-war “Baby Boom” in the U.S and Europe. Lasts until 1964 with 3.8 children per family average.</p>
+				</div>
+				<div class="ms-section" id="left32">
+				</div>
+				<div class="ms-section" id="left33">
+					<h3>1960</h3>
+					<p>Sri Lanka announces the first female Prime Minister.</p>
+				</div>
+				<div class="ms-section" id="left34">
+				</div>
+				<div class="ms-section" id="left35">
+					<h3>1964</h3>
+					<p>Vaccine for measles is available; child deaths are reduced worldwide.</p>
+				</div>
+				<div class="ms-section" id="left36">
+				</div>
+				<div class="ms-section" id="left37">
+					<h3>1970</h3>
+					<p>First Earth Day</p>
+				</div>
+				<div class="ms-section" id="left38">
+				</div>
+				<div class="ms-section" id="left39">
+					<h3>1980</h3>
+					<p>Smallpox is eradicated (it has reappeared in recent years but was non-existent for several decades).</p>
+				</div>
+				<div class="ms-section" id="left40">
+				</div>
+				<div class="ms-section" id="left41">
+					<h3>1985</h3>
+					<p>The world's ecological footprint begins to exceed the Earth’s biocapacity.</p>
+				</div>
+				<div class="ms-section" id="left42">
+				</div>
+				<div class="ms-section" id="left43">
+					<h3>1992</h3>
+					<p> Cod begin to disappear off the coast of Canada due to overfishing.
+					</p>
+				</div>
+				<div class="ms-section" id="left44">
+				</div>
+				<div class="ms-section" id="left45">
+					<h3>1995</h3>
+					<p> Most deforestation of the Amazon in one year is recorded. 11,216 sq. miles (bigger than the state of
+						Massachusetts).
+					</p>
+				</div>
+				<div class="ms-section" id="left46">
+				</div>
+				<div class="ms-section" id="left47">
+					<h3>1997</h3>
+					<p>The first hybrid car (gas and electric) goes on sale. The Toyota Prius is mass produced.</p>
+				</div>
+				<div class="ms-section" id="left48">
+				</div>
+				<div class="ms-section" id="left49">
+					<h3>2000</h3>
+					<p>The United Nations adopts the Millennium Development Goals to improve the standard of living for all by 2015</p>
+				</div>
+				<div class="ms-section" id="left50">
+				</div>
+				<div class="ms-section" id="left51">
+					<h3>2009</h3>
+					<p>World Hunger reaches a new high with an estimated 1 billion people that do not have enough to eat.</p>
+				</div>
+			</div>
+
+
+			<div class="ms-right">
+				<div class="ms-section" id="right1">
+				</div>
+				<div class="ms-section" id="right2">
+					<h3>1798</h3>
+					<p>English Economist Thomas Malthus published “An Essay on The Principles of Population”
+						warning the dangers of human overpopulation.</p>
+				</div>
+				<div class="ms-section" id="right3">
+				</div>
+				<div class="ms-section" id="right4">
+					<h3>1820’s</h3>
+					<p> Lowell, Massachusetts. America’s first planned factory town is built beginning the Industrial Revolution in
+						America.</p>
+				</div>
+				<div class="ms-section" id="right5">
+				</div>
+				<div class="ms-section" id="right6">
+					<h3>1834</h3>
+					<p> Cyrus McCormick creates the first mechanical reaper that allows farmers to triple their output, thus allowing
+						for more crops to feed the growing population.
+					</p>
+				</div>
+				<div class="ms-section" id="right7">
+				</div>
+				<div class="ms-section" id="right8">
+					<h3>1845</h3>
+					<p> The Irish Potato Famine begins, killing more than 1 million people and forcing a mass migration due to
+						starvation.</p>
+				</div>
+				<div class="ms-section" id="right9">
+				</div>
+				<div class="ms-section" id="right10">
+					<h3>1855</h3>
+					<p> Charles Goodyear (Goodyear tires and other products) produces the first rubber condom.
+					</p>
+				</div>
+				<div class="ms-section" id="right11">
+				</div>
+				<div class="ms-section" id="right12">
+					<h3>1865</h3>
+					<p> The U.S. Supreme Court strikes down the ban of contraceptives.
+					</p>
+				</div>
+				<div class="ms-section" id="right13">
+				</div>
+				<div class="ms-section" id="right14">
+					<h3>1873</h3>
+					<p> The U.S Congress passes the Comstock laws making all forms of contraception illegal.</p>
+				</div>
+				<div class="ms-section" id="right15">
+				</div>
+				<div class="ms-section" id="right16">
+					<h3>1885</h3>
+					<p> The first combustible engine is developed by German engineer Gottlieb Daimler.
+					</p>
+				</div>
+				<div class="ms-section" id="right17">
+				</div>
+				<div class="ms-section" id="right18">
+					<h3>1902</h3>
+					<p> American Engineer Willis Carrier creates the first air conditioner, which leads to population migration to the
+						southern states.</p>
+				</div>
+				<div class="ms-section" id="right19">
+				</div>
+				<div class="ms-section" id="right20">
+					<h3>1908</h3>
+					<p> Ford’s first Model T rolls off the assembly line. 15 Million more were sold in the next 20 years. </p>
+				</div>
+				<div class="ms-section" id="right21">
+				</div>
+				<div class="ms-section" id="right22">
+					<h3>1917</h3>
+					<p> GE launches the first refrigerator keeping food cold and reducing foodborne illness.
+					</p>
+				</div>
+				<div class="ms-section" id="right23">
+				</div>
+				<div class="ms-section" id="right24">
+					<h3>1928</h3>
+					<p> The Spanish Flu epidemic kills over 50 million people worldwide.</p>
+				</div>
+				<div class="ms-section" id="right25">
+				</div>
+				<div class="ms-section" id="right26">
+					<h3>1937</h3>
+					<p> The first washing machine is introduced. This invention has greatly reduced the amount of time spent washing
+						clothes.
+					</p>
+				</div>
+				<div class="ms-section" id="right27">
+				</div>
+				<div class="ms-section" id="right28">
+					<h3>1939-1945</h3>
+					<p> WWII results in 60 million deaths.</p>
+				</div>
+				<div class="ms-section" id="right29">
+				</div>
+				<div class="ms-section" id="right30">
+					<h3>1945</h3>
+					<p> The United Nations is formed to promote “respect human rights and freedoms for all”.</p>
+				</div>
+				<div class="ms-section" id="right31">
+				</div>
+				<div class="ms-section" id="right32">
+					<h3>1955</h3>
+					<p> FIrst vaccine for Polio is created beginning mass inoculations
+					</p>
+				</div>
+				<div class="ms-section" id="right33">
+				</div>
+				<div class="ms-section" id="right34">
+					<h3>1962</h3>
+					<p> Rachel Carson published “Silent Spring” drawing attention to the dangers of pesticides on human health and the
+						environment</p>
+				</div>
+				<div class="ms-section" id="right35">
+				</div>
+				<div class="ms-section" id="right36">
+					<h3>1968</h3>
+					<p> Book “The Population Bomb” by Paul Ehrlich is published warning of the dangers of exponential Population
+						growth.
+					</p>
+				</div>
+				<div class="ms-section" id="right37">
+				</div>
+				<div class="ms-section" id="right38">
+					<h3>1978</h3>
+					<p> The first “Test Tube Baby” is born. More than 4 million babies have been born since using in-vitro
+						fertilization.
+					</p>
+				</div>
+				<div class="ms-section" id="right39">
+				</div>
+				<div class="ms-section" id="right40">
+					<h3>1980</h3>
+					<p> China’s population reaches 1 billion and the government establishes the “one child” policy to limit population
+						growth.
+					</p>
+				</div>
+				<div class="ms-section" id="right41">
+				</div>
+				<div class="ms-section" id="right42">
+					<h3>1989</h3>
+					<p> The World Wide Web is created by British Physicist Timothy Berners-Lee allowing for rapid, global
+						communications
+					</p>
+				</div>
+				<div class="ms-section" id="right43">
+				</div>
+				<div class="ms-section" id="right44">
+					<h3>1994</h3>
+					<p> World Summit in Cairo, Egypt establishes that the key to improving poverty and stabilizing world populations
+						is women empowerment.
+					</p>
+				</div>
+				<div class="ms-section" id="right45">
+				</div>
+				<div class="ms-section" id="right46">
+					<h3>1997</h3>
+					<p> The Great Pacific Garbage Patch is discovered. A floating junkyard of mostly plastic that stretches for
+						hundreds of miles.
+					</p>
+				</div>
+				<div class="ms-section" id="right47">
+				</div>
+				<div class="ms-section" id="right48">
+					<h3>1998</h3>
+					<p> Coral bleaching for high sea temperatures destroys 16% of the worlds coral reef in one year. 50% of the reefs
+						in the Indian Ocean are already destroyed.
+					</p>
+				</div>
+				<div class="ms-section" id="right49">
+				</div>
+				<div class="ms-section" id="right50">
+					<h3>2008</h3>
+					<p> The United Nations announces that more than 50% of the World's population live in cities.
+					</p>
+				</div>
+				<div class="ms-section" id="right51">
+				</div>
+			</div>
+
+	</body>
+
+</html>
