@@ -376,7 +376,7 @@ a {
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     position: sticky;
-    top: -60px;
+    top: 0px;
     right: 25px;
     font-size: calc(32px + 4vw);
     background: rgba(0, 0, 0, 0.75);
